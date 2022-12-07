@@ -7,7 +7,6 @@ jobs:
     steps:
       - run: pwd
       - run: sudo apt-get update
-      - run: sudo apt-get install docker
       - run: docker pull alpine
           
       - run: echo "🍏 This job's status is ${{ job.status }}."
