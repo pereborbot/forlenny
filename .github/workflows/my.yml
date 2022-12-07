@@ -1,0 +1,13 @@
+name: GitHub Actions Demo
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+on: [push]
+jobs:
+  Build docker:
+    runs-on: ubuntu-latest
+    steps:
+      - run: pwd
+      - run: apt-get update
+      - run: apt-get install docker
+      - run: docker pull alpine
+          
+      - run: echo "🍏 This job's status is ${{ job.status }}."
